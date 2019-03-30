@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        
+        <title>Pig Game</title>
+    </head>
+
+    <body>       
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown" style="float:right">
+                <a class="dropbtn green" href="#about">Rules</a>
+                <div class="dropdown-content rules">
+                    <h3>Mode 1 Dice</h3>
+                    <p class="align-left">If a player rolls :</p>
+                    <p><t4>1</t4> <br/> 
+                        He loses all his <b><em>Current Points</em></b>. <br/> 
+                        It's the next player's turn. <br/>
+                        <br/>
+                        <t4>6 twice in a row</t4> <br/> 
+                        He loses all his <b><em>Current Points</em></b> + <b><em>Global Points</em></b>. It's the next player's turn. <br/>
+                        <br/>
+                        <t4>The same number three times in a row</t4> <br/>
+                        He loses the game.
+                    </p>
+                    <br/>
+                    <h3>Mode 2 Dices</h3>        
+                    <p>If a player rolls <b>1</b> : He loses all his <b><em>Current Points</em></b>. It's the next player's turn.</p>
+                </div>
+            </li>
+        </ul>
+        
+        <div class="wrapper clearfix">
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+            </div>
+            
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+            
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+            
+            <input type="text" placeholder="Final score" class="final-score">
+            
+            <img src="dice-5.png" alt="Dice" class="dice">
+            
+            <div class="dices">
+                <img src="dice-5.png" alt="Dice1" class="dice-1">
+                <img src="dice-5.png" alt="Dice2" class="dice-2">
+            </div>
+            
+            <div class="triple">
+                <img src="dice-5.png" alt="Dice1" class="dice-x">
+                <img src="dice-5.png" alt="Dice2" class="dice-x">
+                <img src="dice-5.png" alt="Dice3" class="dice-x">
+            </div>
+            
+            <button class="btn-mode"><img src="dice-1.png" alt="Mode" class="mode"></button>
+        </div>
+        
+        <script src="app.js"></script>
+    </body>
+</html>

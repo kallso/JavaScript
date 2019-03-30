@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+/*         const json = `{
+            "id": 5704502401302528,
+            "weather_state_name": "Clear",
+            "weather_state_abbr": "c",
+            "wind_direction_compass": "W",
+            "created": "2018-09-20T08:56:17.220744Z",
+            "applicable_date": "2018-09-20",
+            "min_temp": 12.8125,
+            "max_temp": 20.439999999999998,
+            "the_temp": 20.1,
+            "wind_speed": 5.932213859196294,
+            "wind_direction": 264.51515273509574,
+            "air_pressure": 1013.53,
+            "humidity": 65,
+            "visibility": 15.313693032689095,
+            "predictability": 68
+            }`;
+        console.log(json);
+        console.log(JSON.parse(json));
+        const jsonParsed = JSON.parse(json);
+ */
+
+
+        /* async function getWeatherAW() {
+            try {
+                const result = await fetch(`https://api.github.com/users/chriscoyier/repos`);
+                const data = await result.json();
+                const tomorrow = data.consolidated_weather[1];
+                console.log(`Temperatures tomorrow in ${data.title} stay between ${tomorrow.min_temp} and ${tomorrow.max_temp}.`);
+                return data;
+            } catch(error) {
+                alert(error);
+            }
+        }
+        getWeatherAW(2487956);
+        
+        let dataLondon;
+        getWeatherAW(44418).then(data => {
+            dataLondon = data
+            console.log(dataLondon);
+        }); */
+
+
+        async function getRepo() {
+            try {
+                const result = await fetch(`https://api.github.com/users/chriscoyier/repos`);
+                console.log(result);
+                console.log(result.headers);
+                const test = {a : 1};
+                return test;
+            } catch(error) {
+                alert(error);
+            }
+        }
+        getRepo().then(result => {
+            console.log(result);
+            console.log(result.a);
+            console.log(result.headers.get('content-type'));
+        });     
+    </script>
+</body>
+
+</html>
